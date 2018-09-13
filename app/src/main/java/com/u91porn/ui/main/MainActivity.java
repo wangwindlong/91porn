@@ -163,10 +163,10 @@ public class MainActivity extends MvpActivity<MainView, MainPresenter> implement
 
     private void showVideoBottomSheet(final int checkIndex) {
         new QMUIBottomSheet.BottomListSheetBuilder(this, true)
-                .addItem(ResourceUtil.getDrawable(this, R.drawable.ic_search_black_24dp), "搜索91视频")
-                .addItem(ResourceUtil.getDrawable(this, R.drawable.ic_video_library_black_24dp), "91视频")
-                .addItem(ResourceUtil.getDrawable(this, R.drawable.ic_video_library_black_24dp), "朱古力视频")
-                .addItem(ResourceUtil.getDrawable(this, R.drawable.ic_file_download_black_24dp), "我的下载")
+                .addItem(getResources().getDrawable(R.drawable.ic_search_black_24dp), "搜索91视频")
+                .addItem(getResources().getDrawable(R.drawable.ic_video_library_black_24dp), "91视频")
+                .addItem(getResources().getDrawable(R.drawable.ic_video_library_black_24dp), "朱古力视频")
+                .addItem(getResources().getDrawable(R.drawable.ic_file_download_black_24dp), "我的下载")
                 .setCheckedIndex(checkIndex)
                 .setOnSheetItemClickListener(new QMUIBottomSheet.BottomListSheetBuilder.OnSheetItemClickListener() {
                     @Override
@@ -190,10 +190,11 @@ public class MainActivity extends MvpActivity<MainView, MainPresenter> implement
     }
 
     private void showPictureBottomSheet(int checkIndex) {
+//        ResourceUtil.getDrawable(this, R.drawable.ic_search_black_24dp)
         new QMUIBottomSheet.BottomListSheetBuilder(this, true)
-                .addItem(ResourceUtil.getDrawable(this, R.drawable.ic_photo_library_black_24dp), "妹子图")
-                .addItem(ResourceUtil.getDrawable(this, R.drawable.ic_photo_library_black_24dp), "九妹图社")
-                .addItem(ResourceUtil.getDrawable(this, R.drawable.ic_photo_library_black_24dp), "花瓣网")
+                .addItem(getResources().getDrawable(R.drawable.ic_photo_library_black_24dp), "妹子图")
+                .addItem(getResources().getDrawable(R.drawable.ic_photo_library_black_24dp), "九妹图社")
+                .addItem(getResources().getDrawable(R.drawable.ic_photo_library_black_24dp), "花瓣网")
                 .setCheckedIndex(checkIndex)
                 .setOnSheetItemClickListener(new QMUIBottomSheet.BottomListSheetBuilder.OnSheetItemClickListener() {
                     @Override
@@ -208,8 +209,8 @@ public class MainActivity extends MvpActivity<MainView, MainPresenter> implement
 
     private void showForumBottomSheet(int selectIndex) {
         new QMUIBottomSheet.BottomListSheetBuilder(this, true)
-                .addItem(ResourceUtil.getDrawable(this, R.drawable.ic_library_books_black_24dp), "91论坛")
-                .addItem(ResourceUtil.getDrawable(this, R.drawable.ic_library_books_black_24dp), "草榴社区")
+                .addItem(getResources().getDrawable(R.drawable.ic_library_books_black_24dp), "91论坛")
+                .addItem(getResources().getDrawable(R.drawable.ic_library_books_black_24dp), "草榴社区")
                 .setCheckedIndex(selectIndex)
                 .setOnSheetItemClickListener(new QMUIBottomSheet.BottomListSheetBuilder.OnSheetItemClickListener() {
                     @Override
@@ -231,11 +232,11 @@ public class MainActivity extends MvpActivity<MainView, MainPresenter> implement
     }
 
     private void initBottomNavigationBar(@IntRange(from = 0, to = 4) int position) {
-        bottomNavigationBar.addItem(new BottomNavigationItem(ResourceUtil.getDrawable(this, R.drawable.ic_video_library_black_24dp), R.string.title_video));
-        bottomNavigationBar.addItem(new BottomNavigationItem(ResourceUtil.getDrawable(this, R.drawable.ic_photo_library_black_24dp), R.string.title_photo));
-        bottomNavigationBar.addItem(new BottomNavigationItem(ResourceUtil.getDrawable(this, R.drawable.ic_library_books_black_24dp), R.string.title_forum));
-        bottomNavigationBar.addItem(new BottomNavigationItem(ResourceUtil.getDrawable(this, R.drawable.ic_library_music_black_24dp), R.string.title_music));
-        bottomNavigationBar.addItem(new BottomNavigationItem(ResourceUtil.getDrawable(this, R.drawable.ic_menu_black_24dp), R.string.title_me));
+        bottomNavigationBar.addItem(new BottomNavigationItem(getResources().getDrawable(R.drawable.ic_video_library_black_24dp), R.string.title_video));
+        bottomNavigationBar.addItem(new BottomNavigationItem(getResources().getDrawable(R.drawable.ic_photo_library_black_24dp), R.string.title_photo));
+        bottomNavigationBar.addItem(new BottomNavigationItem(getResources().getDrawable(R.drawable.ic_library_books_black_24dp), R.string.title_forum));
+        bottomNavigationBar.addItem(new BottomNavigationItem(getResources().getDrawable(R.drawable.ic_library_music_black_24dp), R.string.title_music));
+        bottomNavigationBar.addItem(new BottomNavigationItem(getResources().getDrawable(R.drawable.ic_menu_black_24dp), R.string.title_me));
 
         bottomNavigationBar.setMode(BottomNavigationBar.MODE_FIXED);
         bottomNavigationBar.setActiveColor(R.color.bottom_navigation_bar_active);
